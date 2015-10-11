@@ -5,14 +5,14 @@ The First-fir decreasing algorithm has been used to solve this problem.
 
 ##Class explanation
 
-* CTParser: Parses the data from the file given
-* CTValidator: Validates parsed data and exports an Array with unique, valid  values
-* CTManager: Runs the algorithm to solve the problem
-* CTPrinter: Prints schedule to stdout
+* `CTParser`: Parses the data from the file given
+* `CTValidator`: Validates parsed data and exports an Array with unique, valid  values
+* `CTManager`: Runs the algorithm to solve the problem
+* `CTPrinter`: Prints schedule to stdout
 
-Entity classes:
-* Talk: Description and length for each talk
-* Track: An array of talks and their total length for each session
+###Entity classes:
+* `Talk`: Description and length for each talk
+* `Track`: An array of talks and their total length for each session
 
 ##Algorithm
 
