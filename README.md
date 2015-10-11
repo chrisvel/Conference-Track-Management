@@ -1,7 +1,7 @@
 #Conference Track Management
 
 ##Solution
-The First-fir decreasing algorithm has been used to solve this problem.
+The First-fit decreasing algorithm has been used to solve this problem.
 https://en.wikipedia.org/wiki/Bin_packing_problem
 
 ##Class explanation
@@ -37,7 +37,7 @@ In my machine, it takes no time to find the solution:
 ```
 real	0m0.157s
 user	0m0.075s
-sys	 0m0.061s
+sys	  0m0.061s
 ```
 
 ##Tests
