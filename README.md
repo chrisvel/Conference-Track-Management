@@ -1,4 +1,4 @@
-#CTManager - Conference Track Management
+#Conference Track Management
 
 ##Solution
 The First-fir decreasing algorithm has been used to solve this problem.
