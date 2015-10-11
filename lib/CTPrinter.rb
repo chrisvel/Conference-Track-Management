@@ -55,19 +55,19 @@ class CTPrinter
   def print_schedule
     @tracks.each_with_index do |track, index|
       puts
-      puts "Track #{index + 1} :: total length #{track.total_length}min"
+      puts "Track #{index + 1} :: #{track.total_length}min"
 
       # if it's a morning session, the starting time is 09:00 (AM) and
       # if it's an afternoon one, it's 01:00 (PM)
       index % 2 == 0 ? ttime = 900 : ttime = 100
 
       track.talks.each do |talk|
-        # get formatted time in "09:00" format
+        # get formatted time in "xx:xx" format
         time_formatted = format_time(ttime)
         # add AM/PM suffix
         index % 2 == 0 ? ampm = "AM" : ampm = "PM"
 
-        puts "#{time_formatted}#{ampm} #{talk.description} #{talk.length == 5 ? 'lightning' : talk.length.to_s+'min'}"
+        puts "#{time_formatted}#{ampm} #{talk.description} #{talk.length == 5 ? 'lightning' : talk.length.to_s + 'min'}"
         # split new time
         new_time = time_formatted.chars
         # delete ":" from array's elements
