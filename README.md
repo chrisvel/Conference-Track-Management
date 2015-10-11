@@ -1,41 +1,96 @@
-# CTManager
+#CTManager - Conference Track Management
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/CTManager`. To experiment with that code, run `bin/console` for an interactive prompt.
+##Solution
+The First-fir decreasing algorithm has been used to solve this problem.
 
-TODO: Delete this and the text above, and describe your gem
+##Class explanation
 
-## Installation
+* CTParser: Parses the data from the file given
+* CTValidator: Validates parsed data and exports an Array with unique, valid  values
+* CTManager: Runs the algorithm to solve the problem
+* CTPrinter: Prints schedule to stdout
 
-Add this line to your application's Gemfile:
+Entity classes:
+* Talk: Description and length for each talk
+* Track: An array of talks and their total length for each session
 
-```ruby
-gem 'CTManager'
+##Algorithm
+
+1. Create a new Track
+2. Pick up a talk
+3. If total length + talk length < time limit, append to Track, else
+4. Iterate over Tracks available except current one
+5. If total length + talk length < time limit, append to Track, else
+6. Create a new Track
+7. Append talk to new Track
+8. Return to step (2)
+
+Below you can find a brief description of the problem.
+
+##Problem : Conference Track Management
+
+You are planning a big programming conference and have received many proposals which have passed the initial screen process but you're having trouble fitting them into the time constraints of the day -- there are so many possibilities! So you write a program to do it for you.
+
+*  The conference has multiple tracks each of which has a morning and afternoon session.
+*  Each session contains multiple talks.
+*  Morning sessions begin at 9am and must finish by 12 noon, for lunch.
+*  Afternoon sessions begin at 1pm and must finish in time for the networking event.
+*  The networking event can start no earlier than 4:00 and no later than 5:00.
+*  No talk title has numbers in it.
+*  All talk lengths are either in minutes (not hours) or lightning (5 minutes).
+*  Presenters will be very punctual; there needs to be no gap between sessions.
+
+Note that depending on how you choose to complete this problem, your solution may give a different ordering or combination of talks into tracks. This is acceptable; you don’t need to exactly duplicate the sample output given here.
+
+##Test input:
+```
+Writing Fast Tests Against Enterprise Rails 60min
+Overdoing it in Python 45min
+Lua for the Masses 30min
+Ruby Errors from Mismatched Gem Versions 45min
+Common Ruby Errors 45min
+Rails for Python Developers lightning
+Communicating Over Distance 60min
+Accounting-Driven Development 45min
+Woah 30min
+Sit Down and Write 30min
+Pair Programming vs Noise 45min
+Rails Magic 60min
+Ruby on Rails: Why We Should Move On 60min
+Clojure Ate Scala (on my project) 45min
+Programming in the Boondocks of Seattle 30min
+Ruby vs. Clojure for Back-End Development 30min
+Ruby on Rails Legacy App Maintenance 60min
+A World Without HackerNews 30min
+User Interface CSS in Rails Apps 30min
 ```
 
-And then execute:
+##Test output:
+```
+Track 1:
+*  09:00AM Writing Fast Tests Against Enterprise Rails 60min
+*  10:00AM Overdoing it in Python 45min
+*  10:45AM Lua for the Masses 30min
+*  11:15AM Ruby Errors from Mismatched Gem Versions 45min
+*  12:00PM Lunch
+*  01:00PM Ruby on Rails: Why We Should Move On 60min
+*  02:00PM Common Ruby Errors 45min
+*  02:45PM Pair Programming vs Noise 45min
+*  03:30PM Programming in the Boondocks of Seattle 30min
+*  04:00PM Ruby vs. Clojure for Back-End Development 30min
+*  04:30PM User Interface CSS in Rails Apps 30min
+*  05:00PM Networking Event
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install CTManager
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake false` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/CTManager. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
-
-
-## License
-
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
+Track 2:
+*  09:00AM Communicating Over Distance 60min
+*  10:00AM Rails Magic 60min
+*  11:00AM Woah 30min
+*  11:30AM Sit Down and Write 30min
+*  12:00PM Lunch
+*  01:00PM Accounting-Driven Development 45min
+*  01:45PM Clojure Ate Scala (on my project) 45min
+*  02:30PM A World Without HackerNews 30min
+*  03:00PM Ruby on Rails Legacy App Maintenance 60min
+*  04:00PM Rails for Python Developers lightning
+*  05:00PM Networking Event
+```
