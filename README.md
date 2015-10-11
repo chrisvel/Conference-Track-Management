@@ -2,6 +2,7 @@
 
 ##Solution
 The First-fir decreasing algorithm has been used to solve this problem.
+https://en.wikipedia.org/wiki/Bin_packing_problem
 
 ##Class explanation
 
