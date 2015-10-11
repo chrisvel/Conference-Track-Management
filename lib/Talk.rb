@@ -1,3 +1,4 @@
+# Talk class
 class Talk
 
   attr_accessor :description, :length

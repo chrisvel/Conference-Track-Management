@@ -1,3 +1,4 @@
+# Track class
 class Track
 
   attr_accessor :talks, :total_length

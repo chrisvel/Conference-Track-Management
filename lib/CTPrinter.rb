@@ -1,6 +1,7 @@
 require './lib/CTParser'
 require './lib/CTManager'
 
+# This class prints output data to terminal
 class CTPrinter
 
   attr_accessor :talks, :tracks
@@ -10,19 +11,19 @@ class CTPrinter
     @tracks = tracks
   end
 
-  # prints the total length of all the talks in minutes
+  # Prints the total length of all the talks in minutes
   def calc_total_length
     sum = 0
     @talks.each { |talk| sum += talk.length.to_i }
     puts "-- Total length: #{sum} min"
   end
 
-  # prints all the talk descriptions and lengths
+  # Prints all the talk descriptions and lengths
   def puts_talks
     @talks.each { |talk| puts "* #{talk.length} :: #{talk.description}" }
   end
 
-  # takes time as an integer e.g. 1230 and returns it in the appropriate
+  # Takes time as an integer e.g. 1230 and returns it in the appropriate
   # format: "12:30"
   def format_time(ttime)
 
@@ -51,7 +52,7 @@ class CTPrinter
     ttime = "#{thrs}#{hrs}:#{tminutes}#{minutes}"
   end
 
-  # prints the final schedule
+  # Prints the final schedule
   def print_schedule
     @tracks.each_with_index do |track, index|
       puts

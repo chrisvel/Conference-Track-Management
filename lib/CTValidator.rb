@@ -1,3 +1,4 @@
+# This class validates talks arrays
 class CTValidator
 
   attr_accessor :talks

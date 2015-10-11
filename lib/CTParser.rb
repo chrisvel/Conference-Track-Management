@@ -1,6 +1,7 @@
 require './lib/Talk.rb'
 
-# Parses talk data from file and processes them to be in a manageable format
+# This class parses talk data from file and processes them to be in a
+# manageable format
 class CTParser
 
   attr_accessor :data

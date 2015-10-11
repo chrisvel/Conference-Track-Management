@@ -1,5 +1,6 @@
 require './lib/Track'
 
+# This class solves the conference talk management problem
 class CTManager
 
   attr_accessor :talks
@@ -12,17 +13,17 @@ class CTManager
     pack_talks
   end
 
-  # reverse sorts @talks list in order to use FF decreasing algorithm
+  # Reverse sorts @talks list in order to use FF decreasing algorithm
   def transform_to_decreasing
     @talks.sort_by!{ |x| x.length.to_i }.reverse!
   end
 
-  # returns max length depending on track placement
+  # Returns max length depending on track placement
   def get_max_length(x)
     x % 2 == 0 ? y = 180 : y = 240
   end
 
-
+  # Packs the talks into Track containers using the FF decreasing algorithm
   def pack_talks
 
     @tracks << Track.new() # create first [0] Track object
