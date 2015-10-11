@@ -25,6 +25,66 @@ Entity classes:
 7. Append talk to new Track
 8. Return to step (2)
 
+##Usage
+
+The program can be ran very easily:
+
+`ruby lib/application.rb`
+
+In my machine, it takes no time to find the solution:
+
+```
+real	0m0.157s
+user	0m0.075s
+sys	 0m0.061s
+```
+
+##Tests
+
+RSpec is being used and tests are all finished successfully
+
+```
+Finished in 0.04855 seconds (files took 0.1662 seconds to load)
+93 examples, 0 failures
+```
+
+##Output
+
+```
+-- Total length: 785 min
+
+Track 1 :: 180min
+09:00AM Writing Fast Tests Against Enterprise Rails 60min
+10:00AM Communicating Over Distance 60min
+11:00AM Ruby on Rails Legacy App Maintenance 60min
+12:00PM Lunch
+
+Track 2 :: 210min
+01:00PM Rails Magic 60min
+02:00PM Ruby on Rails: Why We Should Move On 60min
+03:00PM Clojure Ate Scala (on my project) 45min
+03:45PM Common Ruby Errors 45min
+05:00PM Networking Event
+
+Track 3 :: 180min
+09:00AM Ruby Errors from Mismatched Gem Versions 45min
+09:45AM Pair Programming vs Noise 45min
+10:30AM Overdoing it in Python 45min
+11:15AM Accounting-Driven Development 45min
+12:00PM Lunch
+
+Track 4 :: 215min
+01:00PM Sit Down and Write 30min
+01:30PM Woah 30min
+02:00PM User Interface CSS in Rails Apps 30min
+02:30PM Programming in the Boondocks of Seattle 30min
+03:00PM A World Without HackerNews 30min
+03:30PM Lua for the Masses 30min
+04:00PM Ruby vs. Clojure for Back-End Development 30min
+04:30PM Rails for Python Developers lightning
+05:00PM Networking Event
+```
+
 Below you can find a brief description of the problem.
 
 ##Problem : Conference Track Management
