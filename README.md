@@ -19,9 +19,9 @@ https://en.wikipedia.org/wiki/Bin_packing_problem
 
 1. Create a new Track
 2. Pick up a talk
-3. If total length + talk length < time limit, append to Track, else
+3. If total length + talk length < time limit, append to Track and return to (2), else
 4. Iterate over Tracks available except current one
-5. If total length + talk length < time limit, append to Track, else
+5. If total length + talk length < time limit, append to Track and return to (2), else
 6. Create a new Track
 7. Append talk to new Track
 8. Return to step (2)
