@@ -1,21 +1,21 @@
-#Conference Track Management
+# Conference Track Management
 
-##Solution
+## Solution
 The First-fit decreasing algorithm has been used to solve this problem.
 https://en.wikipedia.org/wiki/Bin_packing_problem
 
-##Class explanation
+## Class explanation
 
 * `CTParser`: Parses the data from the file given
 * `CTValidator`: Validates parsed data and exports an Array with unique, valid  values
 * `CTManager`: Runs the algorithm to solve the problem
 * `CTPrinter`: Prints schedule to stdout
 
-###Entity classes:
+### Entity classes:
 * `Talk`: Description and length for each talk
 * `Track`: An array of talks and their total length for each session
 
-##Algorithm
+## Algorithm
 
 1. Create a new Track
 2. Pick up a talk
@@ -26,7 +26,7 @@ https://en.wikipedia.org/wiki/Bin_packing_problem
 7. Append talk to new Track
 8. Return to step (2)
 
-##Usage
+## Usage
 
 The program can be ran very easily:
 
@@ -40,7 +40,7 @@ user	0m0.075s
 sys	  0m0.061s
 ```
 
-##Tests
+## Tests
 
 RSpec is being used and tests are all finished successfully
 
@@ -49,7 +49,7 @@ Finished in 0.04855 seconds (files took 0.1662 seconds to load)
 93 examples, 0 failures
 ```
 
-##Output
+## Output
 
 ```
 -- Total length: 785 min
@@ -88,7 +88,7 @@ Track 4 :: 215min
 
 Below you can find a brief description of the problem.
 
-##Problem : Conference Track Management
+## Problem : Conference Track Management
 
 You are planning a big programming conference and have received many proposals which have passed the initial screen process but you're having trouble fitting them into the time constraints of the day -- there are so many possibilities! So you write a program to do it for you.
 
@@ -103,7 +103,7 @@ You are planning a big programming conference and have received many proposals w
 
 Note that depending on how you choose to complete this problem, your solution may give a different ordering or combination of talks into tracks. This is acceptable; you don’t need to exactly duplicate the sample output given here.
 
-##Test input:
+## Test input:
 ```
 Writing Fast Tests Against Enterprise Rails 60min
 Overdoing it in Python 45min
@@ -126,7 +126,7 @@ A World Without HackerNews 30min
 User Interface CSS in Rails Apps 30min
 ```
 
-##Test output:
+## Test output:
 ```
 Track 1:
 *  09:00AM Writing Fast Tests Against Enterprise Rails 60min
